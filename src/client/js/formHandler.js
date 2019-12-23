@@ -6,7 +6,7 @@ function handleSubmit(event) {
   var validateResult = Client.checkForUrl(formUrl);
   if (validateResult) {
     console.log("::: Form Submitted :::");
-    sentimentDetails("/sentiment", formUrl).then(function(data) {
+    sentimentDetails("http://localhost:8080/sentiment", formUrl).then(function(data) {
       console.log(data);
       updateUI("/all");
     });
@@ -20,7 +20,6 @@ const updateUI = async (url = "") => {
   const request = await fetch(url);
   try {
     const allData = await request.json();
-    console.log(allData);
     document.getElementById("results").innerHTML =
       "POLAIRTY is " + allData[allData.length - 1].polarity;
     document.getElementById("results").innerHTML +=
