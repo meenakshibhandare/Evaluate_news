@@ -57,6 +57,8 @@ function sentimentAnalysis(req, res) {
         console.log(newEntry);
         projectData.push(newEntry);
         res.send(newEntry);
+      } else {
+        console.log(error);
       }
     }
   );
