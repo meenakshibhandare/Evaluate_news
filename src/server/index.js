@@ -2,6 +2,8 @@ projectData = [];
 var path = require("path");
 const express = require("express");
 var bodyParser = require("body-parser");
+var cors = require('cors')
+
 const mockAPIResponse = require("./mockAPI.js");
 const dotenv = require("dotenv");
 dotenv.config();
@@ -11,6 +13,7 @@ const app = express();
 app.use(express.static("dist"));
 // parse an HTML body into a string
 app.use(bodyParser.text({ type: "text/html" }));
+app.use(cors())
 
 console.log(__dirname);
 
