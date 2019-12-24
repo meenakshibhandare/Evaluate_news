@@ -15,6 +15,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "aylien_textapi": "^0.7.0",
     "babel-jest": "^24.9.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
@@ -36,6 +37,7 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.2",
+    "supertest": "^4.0.2",
     "webpack-dev-server": "^3.7.2",
     "workbox-webpack-plugin": "^4.3.1"
   }
