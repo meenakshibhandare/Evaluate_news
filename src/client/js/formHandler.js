@@ -47,4 +47,4 @@ const sentimentDetails = async (url = "", data = {}) => {
   }
 };
 
-export { handleSubmit, updateUI };
+export { handleSubmit, updateUI ,sentimentDetails};
